@@ -5,8 +5,22 @@ recorder that a coding agent can drive.
 
 ```sh
 brew tap impressiver/snitt
+brew trust impressiver/snitt
 brew install --cask snitt
 ```
+
+The middle line is not optional and is easy to leave out of an install
+snippet. Homebrew 7 refuses to load a cask from a third-party tap until the
+tap is trusted, with:
+
+```
+Error: Refusing to load cask impressiver/snitt/snitt from untrusted tap
+impressiver/snitt.
+```
+
+That is Homebrew asking whether you mean to run a formula from someone who
+is not Homebrew, which is a fair question and the reason a tap is one repo
+with no review queue.
 
 ## What this repo is
 
