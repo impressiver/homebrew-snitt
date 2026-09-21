@@ -43,3 +43,17 @@ The cask declares `auto_updates true`, because Snitt updates itself through
 Sparkle. Homebrew is how you install it, not how it stays current, and
 declaring that stops `brew upgrade` reinstalling a version it knows over a
 newer one the app has already fetched for itself.
+
+## Licence
+
+[Mozilla Public License 2.0](LICENSE), the same as
+[Snitt itself](https://github.com/impressiver/snitt).
+
+Not a choice this repository got to make. `Casks/snitt.rb` is copied from a
+repository under MPL-2.0, and the MPL is file-level copyleft: a copy of a
+covered file stays covered wherever it goes. Naming the same licence here is
+the honest description of what is already true, rather than a second set of
+terms for one file to be under.
+
+The cask carries its own notice for the same reason, so the file says what it
+is without anyone having to find this README first.
