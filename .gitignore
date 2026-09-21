@@ -1,2 +1,43 @@
-.tokensave/
+# A tap is Casks/snitt.rb and a README. Anything else here is noise a reader
+# has to rule out before trusting the one file that matters, and `brew tap`
+# clones the whole repository onto every user's machine.
+#
+# This exists because `git add -A` in a clone that a local indexer had touched
+# staged its scratch database alongside the cask and pushed it. The rule is
+# narrow on purpose: ignore what tools leave behind, never what a person
+# deliberately adds.
+
+# macOS
 .DS_Store
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# Editors and IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# Local indexers and assistants. The one that actually happened is
+# `.tokensave/`; the rest are here because they are the same kind of thing and
+# cost nothing to name in advance.
+.tokensave/
+.ruff_cache/
+.mypy_cache/
+__pycache__/
+
+# Ruby, for anyone who runs a linter over the cask
+.bundle/
+vendor/bundle/
+Gemfile.lock
+
+# Merge and edit leftovers. A stray `snitt.rb.orig` beside `snitt.rb` is the
+# kind of thing somebody reads by mistake.
+*.orig
+*.rej
+*.bak
